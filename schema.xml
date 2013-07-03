@@ -216,8 +216,10 @@
 	 <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
         <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-        <!-- in this example, we will only use synonyms at query time
+    <!--    <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+	
+	<!-- in this example, we will only use synonyms at query time
         <filter class="solr.SynonymFilterFactory" synonyms="index_lang/synonyms.txt" ignoreCase="true" expand="false"/>
         -->
         <!-- Case insensitive stop word removal.
@@ -246,8 +248,10 @@ splitOnCaseChange="1"
       </analyzer>
       <analyzer type="query">
         <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-        <filter class="solr.SynonymFilterFactory" synonyms="lang/synonyms_ru.txt" ignoreCase="true" expand="true"/>
+     <!--   <tokenizer class="solr.WhitespaceTokenizerFactory"/> -->
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+
+	<filter class="solr.SynonymFilterFactory" synonyms="lang/synonyms_ru.txt" ignoreCase="true" expand="true"/>
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_ru.txt"
