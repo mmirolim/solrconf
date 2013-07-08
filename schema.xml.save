@@ -231,7 +231,7 @@
                 words="lang/stopwords_ru.txt"
                 enablePositionIncrements="true"
                 />
-        <filter class="solr.WordDelimiterFilterFactory"
+       <!--  <filter class="solr.WordDelimiterFilterFactory"
                 protected="lang/protwords_ru.txt"
                 generateWordParts="1"
                 generateNumberParts="1"
@@ -264,7 +264,7 @@ splitOnCaseChange="1"
                 catenateWords="0"
                 catenateNumbers="0"
                 catenateAll="0"
- splitOnCaseChange="1"
+ splitOnCaseChange="0"
                 preserveOriginal="1"/>
         <filter class="solr.LengthFilterFactory" min="2" max="100" />
         <filter class="solr.LowerCaseFilterFactory"/>
