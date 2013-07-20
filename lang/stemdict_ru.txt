@@ -1,12 +1,12 @@
 # Set of overrides for the dutch stemmer
 # TODO: load this as a resource from the analyzer and sync it in build.xml
-fiets	fiets
-bromfiets	bromfiets
-ei	eier
-kind	kinder
 юнусабадский	юнусабад
-яккасарайский	яккасарай
 бектемирский	бектемир
-мирзо-улугбекский	мирзо-улугбек
 чиланзарский	чиланзар
+мирабадский	мирабад
+мирзо-улугбекский	мирзо-улугбек
+шайхантахурский	шайхантахур
+яккасарайский	яккасарай
+учтепинский	учтепа
+олмазорский	олмазор
 сергелийский	сергели
