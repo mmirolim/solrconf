@@ -63,7 +63,7 @@
 
               <lib dir="./lib" />
     -->
-
+	<lib dir="./lib" />
   <!-- A dir option by itself adds any files found in the directory to
        the classpath, this is useful for including all jars in a
        directory.
@@ -84,7 +84,7 @@
   <!--<lib dir="../../dist/" regex="apache-solr-cell-\d.*\.jar" />-->
   <!--<lib dir="../../dist/" regex="apache-solr-clustering-\d.*\.jar" />-->
   <!--<lib dir="../../dist/" regex="apache-solr-dataimporthandler-\d.*\.jar" />-->
-  <!--<lib dir="../../dist/" regex="apache-solr-langid-\d.*\.jar" />-->
+  <!--<lib dir="../../dist/" regex="apache-solr-langid-\d.*\.jar" /> -->
   <!-- <lib dir="../../dist/" regex="apache-solr-velocity-\d.*\.jar" /> -->
 
   <!-- If a dir option (with or without a regex) is used and nothing
@@ -1475,17 +1475,18 @@
        rich documents injected via ExtractingRequestHandler.
        See more about langId at http://wiki.apache.org/solr/LanguageDetection
     -->
-    <!--
-     <updateRequestProcessorChain name="langid">
-       <processor class="org.apache.solr.update.processor.TikaLanguageIdentifierUpdateProcessorFactory">
-         <str name="langid.fl">text,title,subject,description</str>
+    
+  <!-- <updateRequestProcessorChain name="langid">
+     <processor class="org.apache.solr.update.processor.TikaLanguageIdentifierUpdateProcessorFactory">
+         <bool name="langid">true</bool>
+	 <str name="langid.fl">spell</str> 
          <str name="langid.langField">language_s</str>
          <str name="langid.fallback">en</str>
        </processor>
        <processor class="solr.LogUpdateProcessorFactory" />
        <processor class="solr.RunUpdateProcessorFactory" />
      </updateRequestProcessorChain>
-    -->
+   -->
 
   <!-- Response Writers
 
