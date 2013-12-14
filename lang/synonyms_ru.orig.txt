@@ -18,22 +18,11 @@ cccfoo => cccbar cccbaz
 fooaaa,baraaa,bazaaa
 # Some synonym groups specific to this example
 GB,gib,gigabyte,gigabytes
-#notice we use "gib" instead of "GiB" so any WordDelimiterFilter coming
-#after us won't split it into two words.
 MB,mib,megabyte,megabytes
 Television, Televisions, TV, TVs
-
 wifi, wi fi, wi-fi
-#st. street
-ул,улица
-#avn. avenue
-пр-т,проспект
-#avenue
-пл,площадь
-#area(massif)
-м-в,массив
-#appartment
-д,дом
+#notice we use "gib" instead of "GiB" so any WordDelimiterFilter coming
+#after us won't split it into two words.
 
 # Synonym mappings can be used for spelling correction too
 #pixima => pixma
