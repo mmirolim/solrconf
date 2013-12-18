@@ -240,7 +240,7 @@
                 catenateAll="0"
 splitOnCaseChange="1"
                 preserveOriginal="1"/> -->
-        <filter class="solr.LengthFilterFactory" min="2" max="100" />
+        <filter class="solr.LengthFilterFactory" min="1" max="100" />
         <filter class="solr.LowerCaseFilterFactory"/>
 		<filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_ru.txt" />
   		<filter class="solr.SnowballPorterFilterFactory" language="Russian" protected="lang/protwords_ru.txt"/>
@@ -266,7 +266,7 @@ splitOnCaseChange="1"
                 catenateAll="0"
  splitOnCaseChange="1"
                 preserveOriginal="1"/> -->
-        <filter class="solr.LengthFilterFactory" min="2" max="100" />
+        <filter class="solr.LengthFilterFactory" min="1" max="100" />
         <filter class="solr.LowerCaseFilterFactory"/>
 		<filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_ru.txt" />
         <filter class="solr.SnowballPorterFilterFactory" language="Russian" protected="lang/protwords_ru.txt"/>
