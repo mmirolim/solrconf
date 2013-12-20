@@ -157,7 +157,7 @@
 # got to, must
 ней            
 # prepositional form of  ей
-для            
+#для            
 # for
 мы             
 # we
@@ -173,7 +173,7 @@
 # self
 чтоб           
 # in order to
-без            
+#без            
 # without
 будто          
 # as if
@@ -187,7 +187,7 @@
 # also
 себе           
 # to oneself
-под            
+#под            
 # beneath
 жизнь          
 # life
