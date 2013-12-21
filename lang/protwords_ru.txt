@@ -1,6 +1,10 @@
 ﻿#-----------------------------------------------------------------------
 # This file blocks words from being operated on by the stemmer and word delimiter.
 
+#cafe
+кафе
+#Mirzo
+мирзо
 
 сергели
 учтепа

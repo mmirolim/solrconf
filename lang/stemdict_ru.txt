@@ -1,5 +1,7 @@
-# Set of overrides for the dutch stemmer
+# Set of overrides for the russian stemmer
+# tab separated
 # TODO: load this as a resource from the analyzer and sync it in build.xml
+# Tashkent Districts
 юнусабадский	юнусабад
 бектемирский	бектемир
 чиланзарский	чиланзар
@@ -10,3 +12,5 @@
 учтепинский	учтепа
 олмазорский	олмазор
 сергелийский	сергели
+#Ulugbeksiy
+улугбекский	улугбек

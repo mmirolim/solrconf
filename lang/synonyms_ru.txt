@@ -11,11 +11,22 @@
 # limitations under the License.
 
 #-----------------------------------------------------------------------
-#some test synonym mappings unlikely to appear in real input text
-aaafoo => aaabar
-bbbfoo => bbbfoo bbbbar
-cccfoo => cccbar cccbaz
-fooaaa,baraaa,bazaaa
+#Explicit mappings match any token sequence on the LHS of "=>"
+#and replace with all alternatives on the RHS.  These types of mappings
+#ignore the expand parameter in the schema.
+
+#Equivalent synonyms may be separated with commas and give
+#no explicit mapping.  In this case the mapping behavior will
+#be taken from the expand parameter in the schema.  This allows
+#the same synonym file to be used in different synonym handling strategies.
+#if expand==true, "ipod, i-pod, i pod" is equivalent to the explicit mapping:
+#ipod, i-pod, i pod => ipod, i-pod, i pod
+# If expand==false, "ipod, i-pod, i pod" is equivalent to the explicit mapping:
+#ipod, i-pod, i pod => ipod#some test synonym mappings unlikely to appear in real input text
+#aaafoo => aaabar
+#bbbfoo => bbbfoo bbbbar
+#cccfoo => cccbar cccbaz
+#fooaaa,baraaa,bazaaa
 # Some synonym groups specific to this example
 GB,gib,gigabyte,gigabytes
 #notice we use "gib" instead of "GiB" so any WordDelimiterFilter coming
@@ -34,6 +45,38 @@ wifi, wi-fi
 м-в,массив
 #appartment
 д,дом
+
+
+#station
+станция,ст
+#marshrutka
+маршрутка,маршрутное такси
+#Related each-other
+терминал,uzcard
+#Food products
+#burger
+burger,бургер,гамбургер
+#pizza
+pizza,пицца,пиццерия
+#fastfood
+фастфуд,fast-food,fastfood
+#vip
+vip,вип
+#Cabina, cabinka
+кабинкой,кабинки,кабинка,кабина
+#Detskiy
+детей, дети, детская
+#Dni
+день,дни,дней,дня
+#Vozle
+близко,около,неподалёку,поблизости,рядом,возле
+#Kureniya
+курения,курящих,курить
+#St metro
+метро,ст м
+#Sea food
+морепродукты,морская,морские,суши,рыба,рыб,рыбное
+
 
 # Synonym mappings can be used for spelling correction too
 #pixima => pixma

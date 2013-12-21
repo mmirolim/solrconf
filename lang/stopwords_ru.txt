@@ -157,7 +157,7 @@
 # got to, must
 ней            
 # prepositional form of  ей
-#для            
+для            
 # for
 мы             
 # we

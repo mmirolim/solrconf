@@ -215,8 +215,11 @@
     -->
 	 <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
+    <!-- Remove not needed characters like before  "exam!\s,\s(exam,exam_exam" but keep numbers like "2.12, 12,1" -->
+	<charFilter class="solr.PatternReplaceCharFilterFactory" pattern='"' replacement=" "/>
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~](?!\s|[0-9]))" replacement=" "/>
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~]\s)" replacement=" "/>
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~-]\s)" replacement=" "/>
+	<charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\s[\\\\/.,+;:!?*^`={}()'_~-])" replacement=" "/>
 	<charFilter class="solr.PatternReplaceCharFilterFactory" pattern="((?!\d)[\\\\/+;:!?*^`={}()'_~])" replacement=" "/>
 	<charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -236,12 +239,12 @@
                 />
         <filter class="solr.WordDelimiterFilterFactory"
                 protected="lang/protwords_ru.txt"
-                generateWordParts="0"
+                generateWordParts="1"
                 generateNumberParts="0"
-                catenateWords="1"
+                catenateWords="0"
                 catenateNumbers="1"
                 catenateAll="0"
-		splitOnCaseChange="0"
+		splitOnCaseChange="1"
 		splitOnNumerics="0"
                 preserveOriginal="1"/> 
         <filter class="solr.LengthFilterFactory" min="1" max="100" />
@@ -252,8 +255,11 @@
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
       <analyzer type="query">
+	<!-- Remove not needed characters like before  "exam!\s,\s(exam,exam_exam" but keep numbers like "2.12, 12,1" -->
+	<charFilter class="solr.PatternReplaceCharFilterFactory" pattern='"' replacement=" "/>
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~](?!\s|[0-9]))" replacement=" "/>
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~]\s)" replacement=" "/>
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\\\\/.,+;:!?*^`={}()'_~-]\s)" replacement=" "/>
+	<charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\s[\\\\/.,+;:!?*^`={}()'_~-])" replacement=" "/>
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="((?!\d)[\\\\/+;:!?*^`={}()'_~])" replacement=" "/>
 	<charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
  	<tokenizer class="solr.WhitespaceTokenizerFactory"/>  
@@ -267,12 +273,12 @@
                 />
         <filter class="solr.WordDelimiterFilterFactory"
                 protected="lang/protwords_ru.txt"
-                generateWordParts="0"
+                generateWordParts="1"
                 generateNumberParts="0"
-                catenateWords="1"
+                catenateWords="0"
                 catenateNumbers="1"
                 catenateAll="0"
-		splitOnCaseChange="0"
+		splitOnCaseChange="1"
 		splitOnNumerics="0"
                 preserveOriginal="1"/>
         <filter class="solr.LengthFilterFactory" min="1" max="100" />
