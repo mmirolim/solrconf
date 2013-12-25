@@ -52,7 +52,7 @@ wifi, wi-fi
 #marshrutka
 маршрутка,маршрутное такси
 #Related each-other
-терминал,uzcard
+терминал,uzcard,uzkart
 #Food products
 #burger
 burger,бургер,гамбургер
