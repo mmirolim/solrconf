@@ -74,8 +74,8 @@ vip,вип
 курения,курящих,курить
 #St metro
 метро,ст м
-#Sea food
-морепродукты,морская,морские,суши,рыба,рыб,рыбное
+#Sushi, seafood
+морепродукты,морская,суши
 
 
 # Synonym mappings can be used for spelling correction too
