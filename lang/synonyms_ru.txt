@@ -34,7 +34,12 @@ GB,gib,gigabyte,gigabytes
 MB,mib,megabyte,megabytes
 Television, Televisions, TV, TVs
 
-wifi, wi-fi
+# teahouse
+чойхона,чайхана,чайхона
+
+# wifi
+wifi,wi-fi,вайфай
+
 #st. street
 ул,улица
 #avn. avenue
